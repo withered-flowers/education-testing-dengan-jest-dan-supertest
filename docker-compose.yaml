@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+  adminer:
+    image: adminer:4.8.1-standalone
+    ports:
+      - 8081:8080
+    environment:
+      ADMINER_DESIGN: 'pepa-linha-dark'
+  # pgadmin:
+  #     image: dpage/pgadmin4:4.21
+  #     environment:
+  #       PGADMIN_DEFAULT_EMAIL: standard@standard.com
+  #       PGADMIN_DEFAULT_PASSWORD: postgres
+  #     ports:
+  #       - 8080:80

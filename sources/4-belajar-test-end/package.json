@@ -1,0 +1,30 @@
+{
+  "name": "4-belajar-test-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "bin": {
+    "4-belajar-test-end": "bin/www.js"
+  },
+  "scripts": {
+    "db:dev": "sequelize-cli db:drop && sequelize-cli db:create && sequelize-cli db:migrate && sequelize-cli db:seed:all",
+    "db:test": "sequelize-cli --env=test db:drop && sequelize-cli --env=test db:create && sequelize-cli --env=test db:migrate && sequelize-cli --env=test db:seed:all",
+    "test": "jest --runInBand --verbose --testTimeout=1000 --forceExit",
+    "start": "node bin/www"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "pg": "^8.8.0",
+    "sequelize": "^6.25.3"
+  },
+  "devDependencies": {
+    "jest": "^29.2.2",
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.5.2",
+    "supertest": "^6.3.1"
+  }
+}
